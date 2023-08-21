@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background: #F5F5F5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.member_button{
+  background: rgba(22, 75, 96, 1);  
+  width: 127px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none; 
+  margin-left: 499px; 
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.member_button p{
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.52px;
+  color: #fff;
+}
+.container{
+  display: flex; 
+  flex-direction: row;
+  margin: auto;
+  margin-block: 23px;
+  margin-left: auto;
+  margin-right: auto; 
+  height: 106px;
+  width:626px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px  rgba(0, 0, 0,0.1); 
+  position: relative;
+}
+.members{
+  display: flex;  
+  height: 63px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 23px;
+}
+.member__image img {
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  object-fit:inherit
+}
+.member__full_name h1{
+  font-weight: 400;
+  line-height: 14.52px;
+  font-size: 16px;
+  color: #000;
+  margin-inline-start:23px ;
+  margin-block: none;
+}
+.member__job_title p{
+  font-family: 400 ;
+  font-size: 12px;
+  line-height: 9.68px;
+  color:rgba(0, 0, 0, 0.5);
+  margin-inline-start:23px ;
+}
+.member__edit_delete{
+  display: flex;
+  position: absolute;
+  right: 23px;
+  top: 36px;  
+  gap: 23px; 
+}
+.pencil{ 
+  font-size: 22px;
+  color:  rgba(22, 75, 96, 1);
+ 
+}
+.bin{
+  font-size: 22px;
+  color:  rgba(22, 75, 96, 1);
+}
+.members__null_members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.members__null_members h1 {
+  color: #000;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 41.15px;
+}
+.arrow_left_light {
+  padding: 34px;
+  /* border: 1 solid #F5F5F5;
+  background: #F5F5F5; */
+  font-size: 32px;
+  color: rgba(22, 75, 96, 1) !important; 
+}
+.update_container {
+  /* height: 100vh; */
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+.update_member_image {
+  width: 161px;
+  height: 161px;
+  border: 1px solid rgba(22, 75, 96, 1);
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 50px;
+  left:50%;
+  transform: translateX(-50%);
+}
+.update_member_image img{
+  width: 161px;
+  height: 161px;
+  border-radius: 50%;
+  object-fit: fill; 
+}
+.fileStream {
+  display: none;
+}
+.EditImage {
+  position: absolute;
+  right: -2px;
+  bottom: 20px;
+  background: #F5F5F5;
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 50%;
+  border: 1px solid #F5F5F5;  
+}
+.update_member_tool{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 23px;
+}
+input.textbox{  
+  width: 626px;
+  height: 61px;
+  background: rgba(255, 255, 255, 0.50);
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+input.textbox::placeholder{
+  color:rgba(0, 0, 0, 0.5);
+  padding-left: 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+button.button_edit {
+  position: absolute;
+  width: 126px;
+  height: 61px;
+  left:50%;
+  transform: translateX(-50%);
+  top:70%;
+  border: none;
+  background: rgba(22, 75, 96, 1);
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
